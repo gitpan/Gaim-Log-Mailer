@@ -14,7 +14,7 @@ use Text::TermExtract;
 use YAML qw(LoadFile);
 use URI;
 
-our $VERSION = "0.01";
+our $VERSION = "0.02";
 our %SEEN;
 my  $name = "gaimlogmailer";
 
@@ -34,6 +34,7 @@ sub new {
             logfile             => undef,
             email_to            => undef,
             languages           => ['en'],
+            exclude_words       => [],
         },
         %options,
     };
